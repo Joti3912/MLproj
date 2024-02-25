@@ -18,6 +18,8 @@ from sklearn.model_selection import train_test_split
 train_set, test_set = train_test_split(df, test_size=0.2, random_state=42)
 
 
+#0100  => 2
+
 def z_x(x, bias, weights):
     """ param x: vector containing measurements. x = [x1, x2,.. x_n]
         param bias: single value
@@ -30,7 +32,6 @@ def z_x(x, bias, weights):
         power += weights[i]*x[i]
     denom = 1 + pow(np.e, -power)
     return 1/denom
-
 
 def cost_function(y, x, bias, weights):
     """ param y: Ground truth label for measurements
